@@ -115,6 +115,12 @@ soit de la conserver.
 (en supposant qu'on ait fait des cadres de signatures pour toutes les personnes concernées). De cette manière, on peut obtenir la convention contenant
 toutes les signatures. Celle-ci remplacera la convention temporaire dans la base de données puis sera envoyée aux intéressés.  
 
+\newpage
+\begin{figure}[h]
+\centering
+\includegraphics[width=15cm, height=20cm]{images/stateDiagram.png}
+\caption{Diagramme d'état de la demande de stage}
+\end{figure}
 
 \newpage
 \chapter{Diagramme de séquence}
@@ -123,7 +129,6 @@ toutes les signatures. Celle-ci remplacera la convention temporaire dans la base
 	Dans cette section nous aborderons les trois diagrammes de séquences demandés : la saisie de la fiche de renseignement,
 la validation de celle-ci par le professeur responsable du stage ainsi que la transition d'une année scolaire à une autre.
 
-\newpage
 \section{Cas de la saisie}
 
 	Ce diagramme de séquence sera traité en deux diagrammes différents puisque notre choix de conception est d'avoir réalisé
@@ -148,6 +153,7 @@ d'effectuer le lien.
 \caption{Diagramme de séquence de la saisie de la fiche de renseignement par l'étudiant}
 \end{figure}
 
+\newpage
 	Pour ce qui est du diagramme de séquence plus modeste, concernant la saisie de la fiche de renseignement par l'entreprise, 
 la seule action réalisée est par le contrôleur lorsqu'il recoit les informations à travers la fonction "submitCompanyInformation(Data d)",
 est de compléter les informations incluses dans la bonne instance de "InformationSheet".
@@ -227,7 +233,7 @@ Ce diagramme illustre les classes et leurs interactions entre elles. Une instanc
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=15cm]{images/classDiagramme.png}
+\includegraphics[width=15cm]{images/classDiagram.png}
 \caption{Diagramme de classe}
 \end{figure}
 
