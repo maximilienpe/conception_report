@@ -94,40 +94,27 @@ de classe placé en dernière partie poura etre utilisé comme annexe.
 \chapter{Diagramme d'activité}
 %\addcontentsline{toc}{chapter}{Diagramme d'activité}
 
-	Le processus de demande de stage étant assez complexe. Nous avons choisi de le représenter
-en deux étapes. La première étape est spécifique à la réalisation de la fiche de renseignement. La 
-seconde étape est quant à elle spécifique à la réalisation de la convention. 
+	Nous commencerons ici par explique le diagramme d'état qui nous permettra d'avoir une meilleur vu d'ensemble
+du processus de demande de stage jusqu'à la création de la convention signée par tous les partis concernés. 
 
-	La fiche de renseignement est élaborée en deux temps. L'élève commence par fournir quelques
-renseignements tels que le nom de l'entreprise et une adresse mail qui servira à créer un compte pour 
-cette entreprise dans le cas où elle n'en n'aurait pas déjà. Un mail de création de compte sera envoyé
-automatiquement à l'adresse précisée par l'élève. Ainsi, le responsable du stage en entreprise pourra
-valider son mail et commencer à saisir les informations supplémentaires concernant l'entreprise et 
-le contenu du stage. Une fois envoyées, ces informations seront analysées par le responsable de stage
-en université. Deux choix suivent. Soit la fiche de renseignement est assez satisfaisante pour être 
-validée, soit elle ne l'est pas. Dans le dernier cas, à nouveau deux choix s'offrent au professeur 
-responsable. Soit il décide que l'entreprise ne peut pas satisfaire aux exigeances du stage et 
-réinitialise tout le processus de demande, soit il décide qu'il faudrait davantage d'information pour valider
-la fiche et envoie une notification contenant possible une remarque au responsable en entreprise
-qui aura de nouveau accès au formulaire de renseignement. 
+	Tout d'abord, nous avons réalisé un état pour la création de la fiche de renseignement qui se fait elle en deux 
+étapes. Deux états principaux sont donc à distinguer. Un pour la fiche de renseignement côté élève et un autre pour 
+la fiche de renseignement côté entreprise. Sachant qu'il y a nécessairement chronologiquement la partie élève avant 
+la partie entreprise puisque parmi les informations données par l'élève, il y a le mail permettant au système de 
+créer le compte de l'entreprise. On distingue dans la création de ces deux parties la création pour la première fois et 
+la modification des données. En effet, lors du processus de validation, un élève ou le référent en entreprise peut être 
+amené à réaliser des modifications. 
+	Une fois la fiche de renseignement réalisée, elle est passé en validation. Elle sera alors enregistré sur la base
+de donnée puis transmise à l'administration. 
+	Une fois les données récupérée par l'administration, l'application tente de créer automatiquement à partir des données
+et d'un template, la convention. Elle est vérifiée par l'administration qui choisira soit de recréer une autre convention manuellement
+soit de la conserver. 
+	Une fois validée, la convention temporaire est sauvegardée sur la base de données puis transmise aux personnes consernées les invitant
+à apposer leur signature. 
+	Une fois que toutes les signatures sont récupérées, le systèmes récupères ces signatures par un sytèmes de traitement numérique de l'image 
+(en supposant qu'on ait fait des cadres de signatures pour toutes les personnes concernées). De cette manière, on peut obtenir la convention contenant
+toutes les signatures. Celle-ci remplacera la convention temporaire dans la base de données puis sera envoyée aux intéressés.  
 
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=15cm]{images/firstStepActivityDiagramme.png}
-%\caption{Première étape du diagramme d'activité}
-%\end{figure}
-
-\newpage
-	La création de la convention s'effectue de même en deux moments. On commencera par la réaliser 
-automatiquement ou manuellement si la première solution est insatisfaisante. La phase de signature des trois
-partis suit directement. On procédera dans l'ordre de signature suivant : professeur responsable, élève 
-et enfin responsable en entreprise. Finalement, l'administration récupèrera la convention complètement signée.
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=15cm]{images/secondStepActivityDiagramme.png}
-%\caption{Seconde étape du diagramme d'activité}
-%\end{figure}
 
 \newpage
 \chapter{Diagramme de séquence}
